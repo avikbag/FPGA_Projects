@@ -1,0 +1,67 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
+| Date         : Tue Jun  2 15:35:31 2015
+| Host         : ubuntu running 64-bit Ubuntu 14.04.2 LTS
+| Command      : report_control_sets -verbose -file fifo_4x16_control_sets_placed.rpt
+| Design       : fifo_4x16
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    14 |
+| Minimum Number of register sites lost to control set restrictions |    47 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               9 |            4 |
+| No           | No                    | Yes                    |              11 |            6 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              18 |            7 |
+| Yes          | Yes                   | No                     |              99 |           27 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------+----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------------+----------------+
+|   Clock Signal   |                                   Enable Signal                                  |                                       Set/Reset Signal                                      | Slice Load Count | Bel Load Count |
++------------------+----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------------+----------------+
+|  n_0_en_reg_BUFG | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1                   | reset_IBUF                                                                                  |                1 |              1 |
+|  n_0_en_reg_BUFG | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d1                   | reset_IBUF                                                                                  |                1 |              1 |
+|  n_0_en_reg_BUFG |                                                                                  | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/O1[0]                                        |                1 |              2 |
+|  n_0_en_reg_BUFG |                                                                                  | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/n_0_ngwrdrst.grst.g7serrst.wr_rst_reg[1]_i_1 |                2 |              2 |
+|  n_0_en_reg_BUFG |                                                                                  | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/n_0_ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1 |                1 |              2 |
+|  n_0_en_reg_BUFG |                                                                                  |                                                                                             |                2 |              4 |
+|  n_0_en_reg_BUFG | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/O1[0] | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[0]                                         |                3 |              4 |
+|  n_0_en_reg_BUFG |                                                                                  | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[1]                                         |                2 |              5 |
+|  ck_IBUF_BUFG    |                                                                                  |                                                                                             |                2 |              5 |
+|  n_0_en_reg_BUFG | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]  | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/O1[1]                                        |                2 |              8 |
+|  n_0_en_reg_BUFG | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/E[0]  | U1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[1]                                         |                3 |              8 |
+|  ck_IBUF_BUFG    | p_0_in                                                                           | readin3_out                                                                                 |                8 |             31 |
+|  ck_IBUF_BUFG    | n_0_ctr1[0]_i_2                                                                  | readin1_out                                                                                 |                8 |             32 |
+|  ck_IBUF_BUFG    | readin3_out                                                                      | readin1_out                                                                                 |                8 |             32 |
++------------------+----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------------+----------------+
+
+

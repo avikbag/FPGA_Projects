@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1433102404">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="state_prac.vdi"/>
+  <File Type="BG-DRC" Name="state_prac.drc"/>
+  <File Type="BG-BGN" Name="state_prac.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="state_prac.sysdef"/>
+  <File Type="BITSTR-MMI" Name="state_prac.mmi"/>
+  <File Type="BITSTR-BMM" Name="state_prac_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="state_prac.nky"/>
+  <File Type="BITSTR-RBT" Name="state_prac.rbt"/>
+  <File Type="BITSTR-MSK" Name="state_prac.msk"/>
+  <File Type="BG-BIN" Name="state_prac.bin"/>
+  <File Type="BG-BIT" Name="state_prac.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="state_prac_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="state_prac_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="state_prac_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="state_prac_postroute_physopt.dcp"/>
+  <File Type="ROUTE-SIMILARITY" Name="state_prac_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="state_prac_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="state_prac_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="state_prac_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="state_prac_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="state_prac_route_status.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="state_prac_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="state_prac_power_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="state_prac_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="state_prac_drc_routed.rpt"/>
+  <File Type="ROUTE-DCP" Name="state_prac_routed.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="state_prac_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="state_prac_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="state_prac_postplace_pwropt.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="state_prac_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="state_prac_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="state_prac_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="state_prac_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="state_prac_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="state_prac_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="state_prac_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="state_prac_placed.dcp"/>
+  <File Type="PWROPT-DRC" Name="state_prac_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="state_prac_pwropt.dcp"/>
+  <File Type="OPT-DRC" Name="state_prac_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="state_prac_opt.dcp"/>
+  <File Type="PA-TCL" Name="state_prac.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/practice1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="state_prac"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/const.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+      <Desc>Vivado Implementation Defaults</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
